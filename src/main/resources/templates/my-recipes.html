@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="~{/fragments/head}">
+</head>
+<body>
+<div>
+  <nav th:replace="~{/fragments/navigation}"></nav>
+</div>
+<section class="portfolio section-padding" id="portfolio">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="section-header text-center text-danger pb-5">
+          <h2>My Recipes</h2>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 col-md-12 col-lg-4" th:each="recipe: ${userRecipes}"
+           th:object="${recipe}">
+        <div class="card text-light text-center bg-white pb-2">
+          <div class="card-body text-dark">
+            <div class="img-area mb-4"><img alt="dish-image" class="img-fluid" th:src="@{*{imageUrl}}">
+            </div>
+            <h3 class="card-title" th:text="*{name}">Building Make</h3>
+            <p class="lead" th:text="*{description}"></p>
+            <p class="lead text-sm-center" th:text="|Difficultly: *{difficulty}|"></p>
+            <a th:href="@{/recipes/details/{id}(id=*{id})}">
+              <button type="button" class="btn btn-outline-warning btn-lg">Details</button>
+            </a>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<div>
+  <footer></footer>
+</div>
+
+</body>
+</html>

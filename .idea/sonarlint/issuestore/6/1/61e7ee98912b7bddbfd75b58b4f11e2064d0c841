@@ -1,0 +1,14 @@
+
+|
+java:S1488#"_Immediately return this expression instead of assigning it to the temporary variable "collect".(Ï¼“Ÿ8×ŒóÊñ0
+‚
+java:S14889"eImmediately return this expression instead of assigning it to the temporary variable "recipeViewDto".(•ÁÆ½8ØŒóÊñ0
+u	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(èÜ"8ÙŒóÊñ0
+x
+java:S3655*"VCall "currentUser.isPresent()" or "!currentUser.isEmpty()" before accessing the value.(†š¾ßÿÿÿÿÿ8ùŒóÊñ0
+o
+java:S6204$"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(Ûõï8şŒóÊñ0
+o
+java:S6204+"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(Ûõï8óÊñ0
+T
+java:S1068"2Remove this unused "dishRepository" private field.(¹ò˜ıÿÿÿÿ8‹óÊñ0

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+>>
+
+<head th:replace="~{/fragments/head}">
+</head>
+<body>
+
+<div>
+    <nav th:replace="~{/fragments/navigation}"></nav>
+</div>
+
+<div class="container-fluid" id="container-details">
+    <h2 class="text-center text-white mt-5">Details</h2>
+    <div class="offers row mx-auto d-flex flex-row justify-content-center">
+        <div class="offer card col-sm-2 col-md-3  col-lg-4 m-1 p-0"
+             th:object="${recipeDetails}">
+            <div class="card-body pb-1">
+                <h5 class="card-title" th:text="*{name}">name</h5>
+            </div>
+            <div class="offer card col-sm-2 col-md-3  col-lg-4 m-1 p-0">
+                <img th:src="@{*{imageUrl}}" class="card-img-top" alt="Dish image">
+            </div>
+            <ul class="offer-details list-group list-group-flush">
+                <li class="list-group-item">
+                    <div class="card-text" th:text="*{name}"></div>
+                    <div class="card-text" th:text="*{description}"></div>
+                    <div class="card-text" th:text="*{difficulty}"></div>
+                    <div class="card-text" th:text="*{portions}"></div>
+                    <div class="card-text" th:text="*{cookingTime}"></div>
+                </li>
+            </ul>
+            <div class="card-body align-content-center">
+                <form th:object="${recipeDetails}"
+                      th:action="@{/recipes/details/{id}(id=${recipeDetails.getId()})}" th:method="POST">
+                    <a>
+                        <button type="submit" class="btn btn-outline-warning btn-md">Like</button>
+                    </a>
+            <div class="card-body">
+                <a class="card-link" href="/">Update</a>
+                <a class="card-link" href="/">Delete</a>
+            </div>
+            </form>
+
+        </div>
+    </div>
+
+    <div>
+        <footer></footer>
+    </div>
+
+</body>
+</html>

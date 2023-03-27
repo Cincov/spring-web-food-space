@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head th:replace="~{fragments/head}">
+</head>
+
+<body>
+
+<div>
+    <nav th:replace="~{fragments/navigation}"></nav>
+</div>
+
+<div class="container" id="register-form">
+    <div class="row justify-content-center" style="margin:20px;">
+        <div class="col-lg-4 col-md-6 login-box">
+            <div class="col-lg-12 login-title">
+                Login
+            </div>
+            <div class="col-lg-12 login-form">
+                <form th:method="POST"
+                      th:action="@{/users/login}"
+                      class="main-form mx-auto col-md-8 d-flex flex-column justify-content-center">
+
+                    <div class="form-group">
+                        <label for="username"
+                               class="text-white font-weight-bold">
+                            Username
+                        </label>
+
+                        <input
+                                id="username"
+                                name="username"
+                                th:value="${username}"
+                                type="text"
+                                min="2"
+                                max="50"
+                                class="form-control"
+                                placeholder="Username"/>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password" class="text-white font-weight-bold">Password</label>
+                        <input
+                                id="password"
+                                name="password"
+                                type="password"
+                                min="2"
+                                max="20"
+                                class="form-control"
+                                placeholder="Password"/>
+
+                    </div>
+
+                    <p th:if="${bad_credentials}"
+                       class="errors alert alert-danger">
+                        Invalid username or password.
+                    </p>
+
+                    <div class="row">
+                        <div class="col">
+                            <div class="col-12 login-btm login-button justify-content-center d-flex">
+                                <button type="submit" class="btn btn-outline-primary">Login</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div>
+                <footer></footer>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

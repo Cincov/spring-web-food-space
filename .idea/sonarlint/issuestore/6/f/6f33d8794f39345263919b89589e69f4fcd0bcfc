@@ -1,0 +1,14 @@
+
+v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(µ©§ğ8ßäÖÊñ0
+g
+java:S1128"ERemove this unused import 'org.springframework.data.domain.Pageable'.(‡ë‚Öıÿÿÿÿ8‡…Ëñ0
+e
+java:S1128"IRemove this unused import 'org.springframework.data.web.PageableDefault'.(¯’Î<8‡…Ëñ0
+y
+java:S1128"\Remove this unused import 'org.springframework.security.core.context.SecurityContextHolder'.(ŒÄæë8ˆ…Ëñ0
+l
+java:S1128"ORemove this unused import 'org.springframework.security.core.userdetails.User'.(–Ä€8ˆ…Ëñ0
+k
+java:S1128"IRemove this unused import 'softuni.foodSpace.domain.entities.UserEntity'.(‚ÕÊ•úÿÿÿÿ8ˆ…Ëñ0
+M
+java:S1128"+Remove this unused import 'java.util.UUID'.(ÀãÄ£úÿÿÿÿ8ˆ…Ëñ0

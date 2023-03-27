@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="~{/fragments/head}">
+</head>
+<body>
+
+<div>
+    <nav th:replace="~{/fragments/navigation}"></nav>
+</div>
+
+
+<div class="container-fluid">
+    <h1>Welcome to FoodSpace</h1>
+    <h3>This is a place for great food and awe  some cocktails!</h3>
+    <p>Please login to visit our <span class="text-warning">FoodSpace</span>, or if you don't have already account
+        register!</p>
+    <p class="lead">
+        <a th:href="@{/users/login}"><button type="button" class="btn btn-outline-warning btn-lg">Login</button></a>
+        <a th:href="@{/users/register}"><button type="button" class="btn btn-outline-warning btn-lg">Register</button></a>
+
+</div>
+
+<div>
+    <footer></footer>
+</div>
+
+</body>
+</html>
